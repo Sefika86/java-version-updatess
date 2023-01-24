@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Team <T extends Player> {  //If we write <T> only that means any class(String, Integer...) is accepted
-                                         //,but <T extends Player> accepts only players, (basically looking for Player type)
+                                         //but <T extends Player> accepts only players, (basically looking for Player type)
 
     private String name;
     private List<T> members = new ArrayList<T>();
