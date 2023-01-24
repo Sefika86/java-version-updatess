@@ -11,9 +11,13 @@ public enum Currency {
     DIME(10),
     QUARTER(25);   //; is not mandatory only if you won't type anything below
 
-    int value;
+    private int value;
 
     Currency(int value){
         this.value=value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
