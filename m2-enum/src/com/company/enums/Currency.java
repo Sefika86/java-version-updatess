@@ -6,12 +6,14 @@ public enum Currency {
 
     //everything we are putting in this special type of class(enum), are a constant object
 
-    PENNY,  //how we read this: PENNY is a constant obj of Currency class
-    NICKLE, //NICKLE is an object of Currency class
-    DIME,
-    QUARTER;   //; is not mandatory only if you won't type anything below
+    PENNY(1),  //how we read this: PENNY is a constant obj of Currency class
+    NICKLE(5), //NICKLE is an object of Currency class
+    DIME(10),
+    QUARTER(25);   //; is not mandatory only if you won't type anything below
 
-    public static void method(){
+    int value;
 
+    Currency(int value){
+        this.value=value;
     }
 }
