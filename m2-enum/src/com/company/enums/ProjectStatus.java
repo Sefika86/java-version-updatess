@@ -3,7 +3,7 @@ package com.company.enums;
 public enum ProjectStatus {
     OPEN, CLOSED, PROGRESS("IN PROGRESS");
 
-    String status;
+    String status= "aaa";
 
     ProjectStatus(String status){   //here again you see we have a cons with one parameter ,so we need to assign the constants(objects) here right away
         this.status= status;
@@ -13,5 +13,9 @@ public enum ProjectStatus {
 
     ProjectStatus() {
 
+    }
+
+    public void method(){
+        System.out.println(status);
     }
 }

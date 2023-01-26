@@ -67,6 +67,8 @@ public class Main {
 
 
 
+        ProjectStatus.PROGRESS.method();
+
     }
 
     private static void calculate(double x, double y, Operation operation) {
