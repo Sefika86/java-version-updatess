@@ -1,4 +1,7 @@
 /.idea
-/.out
-/java-version-updatess.iml
+/out
+target/
+
+*.iml
 /.gitignore
+

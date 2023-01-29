@@ -1,6 +1,5 @@
 package com.company.lambda.tasks;
 
-import com.company.lambda.apple.Apple;
 import com.company.lambda.apple.Color;
 
 import java.util.ArrayList;
