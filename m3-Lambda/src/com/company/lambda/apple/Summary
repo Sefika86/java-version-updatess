@@ -1,0 +1,88 @@
+-BEFORE LAMBDA-
+
+public interface ApplePredicate {
+    public abstract boolean test(Apple apple);
+}
+
+
+public class AppleHeavyPredicate implements ApplePredicate {
+    @Override
+    public boolean test(Apple apple) {
+        return apple.getWeight() > 200;
+    }
+}
+
+
+public class AppleGreenColorPredicate implements ApplePredicate {
+    @Override
+    public boolean test(Apple apple) {
+        return apple.getColor().equals(Color.GREEN);
+    }
+}
+
+
+
+
+private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate ){
+        List<Apple> result = new ArrayList<>();
+
+        for(Apple apple : inventory){
+            if(applePredicate.test(apple)){
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+
+
+ public static void main(String[] args) {
+
+         List<Apple> inventory = new ArrayList<Apple>();
+         inventory.add(new Apple(Color.GREEN, 300));
+         inventory.add(new Apple(Color.RED, 100));
+         inventory.add(new Apple(Color.GREEN, 200));
+         inventory.add(new Apple(Color.RED, 50));
+
+
+         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
+         System.out.println(greenApple);
+     }
+
+
+
+
+
+-AFTER LAMBDA-
+
+@FunctionalInterface  (only one abstract method)
+public interface ApplePredicate {
+    public abstract boolean test(Apple apple);
+}
+
+
+
+private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate ){
+        List<Apple> result = new ArrayList<>();
+
+        for(Apple apple : inventory){
+            if(applePredicate.test(apple)){
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+
+
+public static void main(Strings[] args){
+
+    ApplePredicate weightApple = apple -> apple.getWeight() > 200;
+    filterApples(inventory, weightApple);
+
+    filterApples(inventory, apple -> apple.getWeight() > 200);
+
+}
+
+
+
