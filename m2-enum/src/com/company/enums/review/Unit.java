@@ -6,7 +6,10 @@ public enum Unit {
 
     public String value;
 
-    Unit(String value){  //we need this constructor for being able to assign values on constructors
+    Unit(String value){
         this.value = value;
     }
+
+    //we need this constructor for being able to assign values on constructors
+    //it can be only default or private constructor.
 }
