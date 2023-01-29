@@ -1,6 +1,6 @@
-package com.company.lambda;
+package com.company.lambda.sortMethod;
 
-public class BubbleSort implements Sorting{
+public class BubbleSort implements Sorting {
 
     @Override
     public void sort() {

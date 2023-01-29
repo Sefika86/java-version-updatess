@@ -1,0 +1,68 @@
+Creating Lambda
+Step1: Create a new interface, if you already have ready interface then this is optional???
+
+         interface MyLambda{
+
+         }
+
+Step2: Create an abstract method, exact same signature with lambda exp.
+
+          interface MyLambda{
+             MyLambda abc = () -> System.out.println("Ozzy");
+          }
+
+   *** our data type will be our interface name
+   ***but the rule is we have to have only one method in our interface which is called Functional Interface
+   ***otherwise we can not apply Lambda Expression
+
+ex:
+//Lambda Expression
+
+        Sorting quickSort = () -> System.out.println("Quick Sort");
+        as.sort(quickSort);
+        //or
+        as.sort( () -> System.out.println("Quick Sorting") );
+
+        //by doing this we do not need to create QuickSort and BubbleSort classes anymore
+        //but do not forget only for functional interfaces
+        //the old version still will be used a lot when we created more than one abs. methods
+          in Non-Functional interfaces
+
+
+ ***
+ With Java 8 - you have access to bunch of ready functional interfaces
+ for example Predicate Interface
+ we will use these ready interfaces so even creating interface step will be skipped
+
+ BEFORE LAMBDA
+- Create interface
+- Create implementing classes
+- Create method accepting different behaviors(polymorphism)
+- Under Main method create Objects and outside of this main method;
+    crate a private method for the required specific action and use that overridden abstract methods
+    in this method body
+
+ AFTER LAMBDA
+ -Create functional interface (if there is ready interface no necessary to create one)
+ -Create method, pass the lambda function -FUNCTIONAL PROGRAMMING
+ -sort(PASS LAMBDA)
+
+Note:
+If interface has more than one abstract method you cannot use lambda
+if you want to check your interface functional or not =>put annotation @FunctionalInterface
+
+
+
+****WE CAN NOT CREATE INTERFACE OBJECT:
+ApplePredicate applePredicate = new ApplePredicate();  -->this is not possible because we can not create interface objects
+                                                          (reference type and object type can not be same)
+
+But:
+
+ApplePredicate applePredicate = new AppleGreenPredicate(); --> this is doable because we do polymorphism
+
+why?
+
+left side: ApplePredicate applePredicate --> this side is reference type which must be parent class or interface
+right side: AppleGreenPredicate   --> this side is object type which must be a class or interface that
+                                      extends the Parent Class or implements the interface

@@ -1,6 +1,6 @@
-package com.company.lambda;
+package com.company.lambda.sortMethod;
 
-public class QuickSort implements Sorting{
+public class QuickSort implements Sorting {
 
     @Override
     public void sort() {

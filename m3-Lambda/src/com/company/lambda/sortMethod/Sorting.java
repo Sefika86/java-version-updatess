@@ -1,4 +1,4 @@
-package com.company.lambda;
+package com.company.lambda.sortMethod;
 
 public interface Sorting {
 

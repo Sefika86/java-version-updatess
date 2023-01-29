@@ -1,4 +1,6 @@
-package com.company.lambda;
+package com.company.lambda.apple;
+
+//APPLY LOMBOK HERE
 
 public class Apple {
     private Color color; //colors are constant, so why don't we create an Enum class,instead of doing it String

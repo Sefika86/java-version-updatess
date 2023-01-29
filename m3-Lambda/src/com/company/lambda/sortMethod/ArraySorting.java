@@ -1,4 +1,4 @@
-package com.company.lambda;
+package com.company.lambda.sortMethod;
 
 
 public class ArraySorting {   //QuickSort, BubbleSort
@@ -37,6 +37,16 @@ public class ArraySorting {   //QuickSort, BubbleSort
         //the private??? method below in main class can pass any action based on the polymorphism
 
         //This is called BEHAVIOR PARAMETERIZATION in java
+
+        System.out.println("-------------------------------------------------------");
+        //Lambda Expression
+
+        Sorting quickSort = () -> System.out.println("Quick Sort");
+        as.sort(quickSort);
+        //or
+        as.sort( () -> System.out.println("Quick Sorting") );
+
+        //by doing this we do not need to create QuickSort and BubbleSort classes
     }
 
 
