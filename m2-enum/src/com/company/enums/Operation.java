@@ -11,7 +11,7 @@ public enum Operation {
                                              // so we have 4 constructors executed in main class
     }
 
-    //this constructor never can be public, because we can not call this cons anywhere ,so it should be default or private
+    //this constructor never can be public, because we can not call this cons anywhere ,so it should be default or private.
 
 
 }
