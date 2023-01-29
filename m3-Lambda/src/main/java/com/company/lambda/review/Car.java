@@ -1,0 +1,17 @@
+package com.company.lambda.review;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+public class Car {
+
+    private String make;
+    private int tooSpeed;
+    private int year;
+}
