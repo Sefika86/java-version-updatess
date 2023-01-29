@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Lambda;
 
 public class ArraySorting {
 
