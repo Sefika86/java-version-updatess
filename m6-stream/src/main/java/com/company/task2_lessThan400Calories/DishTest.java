@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
 
-public class DishTask {
+public class DishTest {
 
     public static void main(String[] args) {
 
