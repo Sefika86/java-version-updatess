@@ -1,6 +1,6 @@
 package com.company.task2_lessThan400Calories;
 
-import java.util.Comparator;
+import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
 
@@ -41,11 +41,15 @@ public class DishTask {
              //   .sorted(Comparator.comparing(Dish::getCalories))
                 .sorted(comparing(Dish::getCalories))  //if we remove the Comparator, we need to import it
                 .map(Dish::getName)
-                .forEach(System.out::println);
+                 .forEach(System.out::println);
 
 //be careful! if we had put map() before sorted(), then we had the names only so we could not sort based on calories
 
+        System.out.println("===========OR WE PUT THE SOURCE INTO STREAM FLOW BY CREATING A STREAM VARIABLE===========");
 
+        Stream<Dish> dishStream = DishData.getAll().stream();
 
+        dishStream.map(dish -> dish.getName() + ":" + dish.getType().name())
+                .forEach(System.out::println);
     }
 }
