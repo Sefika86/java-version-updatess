@@ -1,4 +1,4 @@
-package com.company.task2_lessThan400Calories;
+package com.company.tasks.dishTask;
 
 import java.util.Arrays;
 import java.util.List;

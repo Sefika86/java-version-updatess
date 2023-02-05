@@ -1,5 +1,6 @@
-package com.company.task2_lessThan400Calories;
+package com.company.tasks.dishTask;
 
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
@@ -12,8 +13,8 @@ public class DishTest {
 
 
         DishData.getAll().stream()
-                .filter(dish-> dish.getCalories()<400)
-              //  .map(dish -> dish.getName())
+                .filter(dish -> dish.getCalories() < 400)
+                //  .map(dish -> dish.getName())
                 .map(Dish::getName)
                 .forEach(System.out::println);
 
@@ -21,7 +22,7 @@ public class DishTest {
         //Print the length of the name of each dish
 
         DishData.getAll().stream()
-                .map(dish->dish.getName().length())
+                .map(dish -> dish.getName().length())
                 .forEach(System.out::println);
 
         //Print any three high calorie dish names (>300)
@@ -37,11 +38,11 @@ public class DishTest {
 
         DishData.getAll().stream()
                 .filter(dish -> dish.getCalories() < 400)
-             //   .sorted(Comparator.comparing(dish -> dish.getCalories()))
-             //   .sorted(Comparator.comparing(Dish::getCalories))
+                //   .sorted(Comparator.comparing(dish -> dish.getCalories()))
+                //   .sorted(Comparator.comparing(Dish::getCalories))
                 .sorted(comparing(Dish::getCalories))  //if we remove the Comparator, we need to import it
                 .map(Dish::getName)
-                 .forEach(System.out::println);
+                .forEach(System.out::println);
 
 //be careful! if we had put map() before sorted(), then we had the names only so we could not sort based on calories
 
@@ -51,5 +52,21 @@ public class DishTest {
 
         dishStream.map(dish -> dish.getName() + ":" + dish.getType().name())
                 .forEach(System.out::println);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
